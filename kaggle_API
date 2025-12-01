@@ -1,0 +1,11 @@
+#import libraries
+#!pip install kaggle
+import kaggle
+
+!kaggle datasets download ankitbansal06/retail-orders -f orders.csv
+
+#extract file from zip file
+import zipfile
+zip_ref = zipfile.ZipFile('orders.csv.zip') 
+zip_ref.extractall() # extract file to dir
+zip_ref.close() # close file
